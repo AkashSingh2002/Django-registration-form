@@ -16,12 +16,10 @@
   {% endfor %}
   <h3>Welcome to the Student Portal</h3>
 
-  {% if user.is_authenticated %}
+
   <h3>Hello {{username}}</h3>
   <h4>You are Successfully Logged in.</h4>
-  <button type = "submit"><a href={% url 'home' %}>Sign Out</a></button>
-    {% else %}
-    <button type = "submit"><a href={% url 'home' %}>Register</a> </button>
-    {% endif %}
+  <button type = "submit">Sign Out</button>
+    
 </body>
 </html>
