@@ -11,7 +11,8 @@ def home(request):
         user = authenticate(request, username = username, password = password)
         if user is not None:
             login(request,user)
-            return HttpResponse("hi {name} You Logged in Sucessfully!",{name:username})
+            return render(request,'home.html')
+        
         else:
             messages.error(request, "Please Register first")
             return redirect('register')
